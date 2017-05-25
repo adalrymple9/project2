@@ -1,0 +1,74 @@
+/*****  styling for entire application  ********/
+
+* {
+    box-sizing: border-box;
+}
+
+
+/********   Style for home   *******/
+
+#p2-homeContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 680px;
+    padding: 1em;
+}
+
+#p2-homeContent {
+    position: relative;
+    order: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 1em;
+    border-radius: 1em 0 0 0;
+    background: rgba(225, 225, 225, 0.59);
+}
+
+#p2-signIn form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#p2-signIn input {
+    width: 100%;
+}
+
+#p2-homeTitle {
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+}
+
+#p2-homeSignInContainer {
+    display: flex;
+}
+
+#p2-signIn,
+#p2-registration,
+#p2-registerPrompt {
+    padding: .5em;
+    flex-basis: 50%;
+}
+
+#p2-signIn {
+    border-right: 1px solid black;
+}
+
+#p2-registerPromt h2 {
+    font-size: 2em;
+}
+
+#p2-registration {
+    display: none;
+}
+
+
+/*******  Style for profile  ******/
+
+
+/*******   Style for trip selecter and set up  ******/
