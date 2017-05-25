@@ -1,0 +1,17 @@
+/*****  styling for entire application  ********/
+
+
+/********   Style for home   *******/
+#p2-homeContent{
+	box-shadow: 1px 1px 1px 1px;
+}
+#p2-homeTitle{
+	line-height: 0;
+}
+#p2-registration{
+	display: none;
+}
+/*******  Style for profile  ******/
+
+
+/*******   Style for trip selecter and set up  ******/ 
