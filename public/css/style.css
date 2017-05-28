@@ -70,5 +70,54 @@
 
 /*******  Style for profile  ******/
 
+#p2-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+#p2-mainContent {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#p2-userContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 6em;
+}
+
+#p2-userData {
+    display: flex;
+    padding: 1em;
+    background: #eee;
+}
+
+#p2-userTripsContainer {
+    position: relative;
+    max-height: 300px;
+    min-width: 300px
+}
+
+#p2-upcomingText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2.5em;
+    width:100%;
+}
+
+#p2-upcomingText h1 {
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+}
+
+#p2-userTrips {
+    overflow-y: scroll;
+    padding: 1em;
+    background: #eee;
+}
+
 
 /*******   Style for trip selecter and set up  ******/

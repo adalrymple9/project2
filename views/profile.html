@@ -4,20 +4,44 @@
 <head>
     <meta charset="UTF-8">
     <title>TITLE</title>
-    
+    <link rel="stylesheet" type="text/css" href="../public/css/reset.css">
+    <link rel="stylesheet" type="text/css" href="../public/css/style.css">
 </head>
 
 <body>
     <div id="p2-head">
         <div id="p2-logo">
-        	<img src="">
+            <img src="" alt="logo">
         </div>
         <div id="p2-logIn">
-        	<button id="p2-logOut">LOG OUT</button>
+            <button id="p2-logOut">LOG OUT</button>
         </div>
     </div>
     <div id="p2-mainContent">
-		
+        <div id="p2-userContainer">
+            <div id="p2-user">
+                <div id="p2-userData">
+                    <img id="p2-userImage" src="{{userImage}}" alt="userImage">
+                    <div id="userProfileInfo">
+                        <p id="p2-userName">{{userName}}</p>
+                        <p id="p2-userTripNumber">{{numberOfTrips}}</p>
+                        <p id="p2-userNextTrip">{{nextTrip}}</p>
+                    </div>
+                </div>
+                <button id="p2-addNewTrip">+ADD NEW TRIP</button>
+            </div>
+            <div id="p2-userTripsContainer">
+                <div id="p2-upcomingText">
+                    <h1>Upcoming Trips</h1>
+                </div>
+                <div id="p2-userTrips">
+                    {{each trip}}
+                    <div class="p2-trip">
+                    </div>
+                    {{/each}}
+                </div>
+            </div>
+        </div>
     </div>
 </body>
 
