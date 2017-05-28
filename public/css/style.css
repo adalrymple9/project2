@@ -4,6 +4,11 @@
     box-sizing: border-box;
 }
 
+#p2-head {
+    display: flex;
+    justify-content: space-between;
+}
+
 
 /********   Style for home   *******/
 
@@ -70,12 +75,8 @@
 
 /*******  Style for profile  ******/
 
-#p2-head {
-    display: flex;
-    justify-content: space-between;
-}
 
-#p2-mainContent {
+#p2-userMainContent {
     margin: 0 auto;
     max-width: 900px;
 }
@@ -121,3 +122,6 @@
 
 
 /*******   Style for trip selecter and set up  ******/
+#p2-tripMainContent{
+    display: flex;
+}
