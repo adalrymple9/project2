@@ -20,6 +20,8 @@
     align-items: center;
     height: 680px;
     padding: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
 }
 
 #p2-homeContent {
@@ -28,7 +30,7 @@
     width: 100%;
     max-width: 600px;
     padding: 1em;
-    border-radius: 1em 0 0 0;
+    border-radius: 1em 1em 1em 1em;
     background: rgba(225, 225, 225, 0.59);
 }
 
@@ -64,8 +66,8 @@
     border-right: 1px solid black;
 }
 
-#p2-registerPromt h2 {
-    font-size: 2em;
+#p2-registerPrompt h2 {
+    font-size: 3em;
 }
 
 #p2-registration {
