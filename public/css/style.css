@@ -1,0 +1,129 @@
+/*****  styling for entire application  ********/
+
+* {
+    box-sizing: border-box;
+}
+
+#p2-head {
+    display: flex;
+    justify-content: space-between;
+}
+
+
+/********   Style for home   *******/
+
+#p2-homeContainer {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    height: 680px;
+    padding: 1em;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+#p2-homeContent {
+    position: relative;
+    order: 1;
+    width: 100%;
+    max-width: 600px;
+    padding: 1em;
+    border-radius: 1em 1em 1em 1em;
+    background: rgba(225, 225, 225, 0.59);
+}
+
+#p2-signIn form {
+    max-width: 300px;
+    margin: 0 auto;
+}
+
+#p2-signIn input {
+    width: 100%;
+}
+
+#p2-homeTitle {
+    position: absolute;
+    top: -1em;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3em;
+}
+
+#p2-homeSignInContainer {
+    display: flex;
+}
+
+#p2-signIn,
+#p2-registration,
+#p2-registerPrompt {
+    padding: .5em;
+    flex-basis: 50%;
+}
+
+#p2-signIn {
+    border-right: 1px solid black;
+}
+
+#p2-registerPrompt h2 {
+    font-size: 3em;
+}
+
+#p2-registration {
+    display: none;
+}
+
+
+/*******  Style for profile  ******/
+
+
+#p2-userMainContent {
+    margin: 0 auto;
+    max-width: 900px;
+}
+
+#p2-userContainer {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    margin-top: 6em;
+}
+
+#p2-userData {
+    display: flex;
+    padding: 1em;
+    background: #eee;
+}
+
+#p2-userTripsContainer {
+    position: relative;
+    max-height: 300px;
+    min-width: 300px
+}
+
+#p2-upcomingText {
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    top: -2.5em;
+    width:100%;
+}
+
+#p2-upcomingText h1 {
+    position: relative;
+    font-size: 2em;
+    text-align: center;
+}
+
+#p2-userTrips {
+    overflow-y: scroll;
+    padding: 1em;
+    background: #eee;
+}
+
+
+/*******   Style for trip selecter and set up  ******/
+#p2-tripMainContent{
+    display: flex;
+}
