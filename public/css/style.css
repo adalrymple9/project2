@@ -77,7 +77,6 @@
 
 /*******  Style for profile  ******/
 
-
 #p2-userMainContent {
     margin: 0 auto;
     max-width: 900px;
@@ -107,7 +106,7 @@
     left: 50%;
     transform: translateX(-50%);
     top: -2.5em;
-    width:100%;
+    width: 100%;
 }
 
 #p2-upcomingText h1 {
@@ -124,6 +123,7 @@
 
 
 /*******   Style for trip selecter and set up  ******/
-#p2-tripMainContent{
+
+#p2-tripMainContent {
     display: flex;
 }
