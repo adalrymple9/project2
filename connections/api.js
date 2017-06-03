@@ -28,13 +28,13 @@ $.post('api/trip', function(req, res) {
 
                 //get correct var names from forsquare API 
                 //create vars for: image of the place, name, catagory and location
-                var day = {
+                var venue = {
                     image: photoUrl,
                     name: response[i].ven.name,
                     cat: response[i].ven.cat,
                     loc: response[i].ven.loc
                 }
-                venueData.push(day);
+                venueData.push(venue);
             }
             var venues = {
                 Venue: venueData;
