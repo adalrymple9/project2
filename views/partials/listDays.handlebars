@@ -1,0 +1,10 @@
+{{#each days}}
+<div class="p2-days">
+	<h2>Day:{{day}}</h2>
+	<div class="p2-trips">
+		{{#each this.trips}}
+		<img class="p2-dayVenueImage" src="{{image}}">
+		{{/each}}
+	</div>
+</div>
+{{/each}}
