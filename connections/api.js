@@ -59,19 +59,19 @@ function getPhotos() {
             client_secret: 'DST5ED0CW1XQZN2GY4QD2JLOZY1W5EUSCFC3OFME1ECFLBLI'
         },
         async: false
-    }).done(function(response) {
-        if (response.response.photos.items.length === 0) {
-            photoUrl = 'http://placehold.it/500x500';
-        } else {
+        }).done(function(response) {
+            if (response.response.photos.items.length === 0) {
+                photoUrl = 'http://placehold.it/500x500';
+            } else {
 
-            var pre = response.response.photos.items[0].prefix;
-            var suf = response.response.photos.items[0].suffix;
-            var size = '500x500';
-            photoUrl = pre + size + suf;
+                var pre = response.response.photos.items[0].prefix;
+                var suf = response.response.photos.items[0].suffix;
+                var size = '500x500';
+                photoUrl = pre + size + suf;
 
-        }
+            }
 
-        console.log(photoUrl);
-    });
+            console.log(photoUrl);
+        });
 
-}
+    }
