@@ -18,6 +18,8 @@ var curryN = require('lodash/fp/curryN');
 
 var photoUrl;
 
+var venueId;
+
 $.post('api/trip', function(req, res) {
     //getting the request data to get city info from front-end
     var city;
@@ -35,6 +37,7 @@ $.post('api/trip', function(req, res) {
         var venuesObj = body.json().response.venues;
         for (var i = 0; i < venuesObj.length; i++) {
             var venuesObj = response.response.venues[i].id;
+            venueId = venuesObj[i].id;
             getPhotos();
 
             //get correct var names from forsquare API 
