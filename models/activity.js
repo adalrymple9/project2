@@ -11,9 +11,10 @@ module.exports = function(sequelize, DataTypes) {
             allowNull: false
         }
     }, {
+    	timestamps: false,
         classMethods: {
             associate: function(models) {
-                Activity.belongsTo(modelsri.Trip);
+                Activity.belongsTo(models.Trip);
             }
         }
     });

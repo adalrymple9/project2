@@ -1,7 +1,7 @@
 var express = require("express");
 var exphbs = require("express-handlebars");
 var db = require('./models');
-
+var _ = require('lodash');
 var app = express();
 var port = process.env.PORT || 3000;
 
@@ -39,19 +39,33 @@ var data = {
     layout: false
 };
 app.post('/currentday', function(req, res){
+	db.
 	console.log({ data: data, layout: false});
 	res.render('partials/listDays', data);
 });
+
+
 app.get('/days', function(req, res) {
-	db.Trip.findOne({where: {id:1}}).then(function(trip){
-		res.json(trip);
-		// res.render('partials/listDays', data);
+	db.Trip.findOne({where: {id:1}, include:[db.Activity]}).then(function(trip){
+		var data = [];
+		for(var i = 0; i < trip.length; i++){
+			data.push(
+					{
+						day: i+1,
+						activities: _(trip.Activities).filter(x=>x.day === i+1).value()
+					}
+				);
+		}
+		//res.json(data);
+		res.render('partials/listDays', {data, layout: false});
 	});
 });
+
+
 app.get('/venuesList', function(req, res){
     res.render('partials/venues',{layout: false});
 });
-db.sequelize.sync({force: true});
+db.sequelize.sync({force: false});
 app.listen(port, function() {
     console.log('server running');
 })

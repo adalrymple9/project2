@@ -1,8 +1,9 @@
-{{#each days}}
+{{#each data}}
 <div class="p2-days">
 	<h2>Day:{{day}}</h2>
 	<div class="p2-trips">
-		{{#each trips}}
+		{{#each activities}}
+		<p>{{venueName}}</p>
 		<img class="p2-dayVenueImage" src="{{image}}">
 		{{/each}}
 	</div>
