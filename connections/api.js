@@ -104,51 +104,5 @@ function populateResults(response) {
 
         });
     });
-    console.log(type);
-    console.log(filteredVenues);
     var results = _.orderBy(filteredVenues, ['hereNow.count'], ['desc']);
-    console.log(results);
-    var appResultsHtml = $('#hs-place-results').html();
-    appResultsTemp = $(appResultsHtml);
-    console.log(appResultsTemp);
-    $('#hs-results-container').empty().append(appResultsTemp);
-    if (results.length == 0) {
-        $('#hs-results-container').empty().append("<h1>Sorry, there's nothing going on in this area.</h1> ")
-    } else {
-        //loop thrue all items
-        for (i = 0; i < resultLimit; i++) {
-
-            var appResultHtml = $('#hs-result').html();
-            var appResultTemp = $(appResultHtml);
-            //get amount of check ins 
-            var here = results[i].hereNow.count;
-            venueId = results[i].id;
-            var name = results[i].name;
-            //get social id's
-            var twitter;
-            var facebook;
-            //get location
-            var address;
-            //get type of location
-            var cat = results[i].categories[0].name;
-            //set fire or ice
-            if (here > 0) {
-                rating = 'assets/img/fire.png';
-            } else {
-                rating = 'assets/img/ice.png';
-            }
-            //append a div with each location info and check in rating
-            getphotos();
-            //append a div with each location info and check in rating
-            console.log(appResultTemp);
-            appResultsTemp.append(appResultTemp);
-            appResultTemp.addClass('slideInUp ');
-            appResultTemp.attr('venueId', venueId);
-            appResultTemp.find('#hs-place-image').attr('src', photoUrl);
-            appResultTemp.find('#hs-place-rating').attr('src', rating);
-            appResultTemp.find('#name').text(name);
-            appResultTemp.find('#type').text(cat);
-        }
-        $('#hs-results-container').append('<button id="load-more" class="btn">Load More Results</button>');
-    }
 }
