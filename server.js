@@ -15,7 +15,7 @@ app.use(methodOverride('_method'));
 app.use("/public", express.static("public"));
 
 app.get('/', function(req, res){
-	res.render('home');
+	res.render('trip');
 });
 
 db.sequelize.sync({ force: false}).then(function() {

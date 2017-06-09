@@ -6,8 +6,10 @@
   "dependencies": {
     "express": "^4.15.3",
     "express-handlebars": "^3.0.0",
+    "fs": "0.0.1-security",
     "method-override": "^2.3.9",
     "mysql": "^2.13.0",
+    "path": "^0.12.7",
     "sequelize": "^3.30.4"
   },
   "devDependencies": {
@@ -27,7 +29,4 @@
     "url": "https://github.com/adalrymple9/project2/issues"
   },
   "homepage": "https://github.com/adalrymple9/project2#readme"
-},
-{
-   "_comment": "Notice above the use of Nodemon as a new technology for the back end. This is only of the ones we've used in this app."
 }
