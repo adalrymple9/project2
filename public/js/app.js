@@ -51,18 +51,25 @@ $('#p2-logIn').on('click', function() {
 //-------------------logic for profile----------------------//
 
 //load set up page when add trip button is pressed
+// $(element).on('click', runSetup);
 
 //--------------------logic for trip------------------------//
 
 //loop through questions
+function runSetup(){
+	$.get('/setuppage', function(){
+		console.log('ran setup page');
+	});
+}
 //store responses in a object
 var tripSetUp = {
     // days: ,
     // startDate:,
     // startLocation:
+    //user token or name
 };
 //after last question load trip page
-
+$.post('users/trips/new-trip', tripSetUp);
 //when trip page loads
 //create new trip array for current trip
 var newTrip = [];
@@ -70,35 +77,56 @@ var newTrip = [];
 var newDay = {
     activities: []
 };
+//activity counter
+var activityCounter;
+//day counter
+var dayCounter;
 
-//load venue data into container
-
-//send request to server with an opject containing the location and catigory
-$('#p2-venues').load('/venuesList');
-//load current day tab
-//$('#p2-dataContainer').load('/currentday', newDay);
+//send request to server with an opject containing the location
+// $('#p2-venues').load('/venuesList', tripSetUp.startLocation);
+// //load current day tab
+// $('#p2-dataContainer').load('/currentday', newDay);
 //event handler for add venue button
 //when the add button is pressed 
-//$().on('click', element, function(){ 	
-//get details from selected venue
-//set details in object
-//push object to activities array in newDay object
-// newDay.activities.push(newActivity);
-//add 1 activity counter 
-// activity++;
-//if counter = 5
-//reset counter to 0 
-//activity = 0;
-//push newDay object to newTrip array
-// newTrip.push(newDay);
-//empty newDay oject
-//
-//add to day counter
-// day++;
-//if day counter = tripSetUp
-//send data to server '/api/setnewtrip'
-//load trip view page 
-//else render current day tap 
+// $('body').on('click', '.p2-addVenueButton', function() {
+//     //get details from selected venue
+//     //set details in object
+//     var selectedActivity = {
+//         // name: $(this).siblings('.p2-venueName').text();
+//         // category: $(this).siblings('.p2-venueCat').text();
+//         // image: $(this).siblings('.p2-venueImage').attr('src');
+//     };
+//     //push object to activities array in newDay object
+//     newDay.activities.push(selectedActivity);
+//     //add 1 activity counter 
+//     activityCounter++
+//     //check if all activities have been selected
+//     if (activityCounter >= 5) {
+//         //reset counter to 0 
+//         activityCounter = 0;
+//         //push newDay object to newTrip array
+//         newTrip.push(newDay);
+//         //empty newDay oject
+//         newDay = {
+//             activities: []
+//         };
+//         //add to day counter
+//         dayCounter++;
+//     };
+//     //check if all days have been set up
+//     //if all days set up
+//     if (dayCounter === tripSetUp.days) {
+//         //send data to server '/api/setnewtrip'
+//         $.put('/setnewtrip', function() {
+
+//         });
+//         //load trip view page 
+//         $().load('/profile')
+//     }
+//     //else render current day tab
+//     else {
+
+//     };
 // });
 
 //event handler for days tab
@@ -111,7 +139,7 @@ $('body').on('click', '#p2-daysButton', function() {
 //event handler for current tab
 $('body').on('click', '#p2-currentDayButton', function() {
     //get current partial and load data from newDay object
-    $('#p2-dataContainer').load('/curentday');
+    $('#p2-dataContainer').load('/currentday', newDay);
 });
 
 
